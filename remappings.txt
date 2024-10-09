@@ -1,5 +1,5 @@
 forge-std/=lib/forge-std/src/
 ds-test/=lib/forge-std/lib/ds-test/src/
-Oxion-Protocol-v1-core/=lib/Oxion-Protocol-v1-core1/
+Oxion-Protocol-v1-core/=lib/Oxion-Protocol-v1-core/
 @openzeppelin/=lib/openzeppelin-contracts/
 solmate/=lib/solmate/src/

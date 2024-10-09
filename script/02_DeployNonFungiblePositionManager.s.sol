@@ -4,7 +4,7 @@ pragma solidity ^0.8.24;
 import "forge-std/Script.sol";
 import {BaseScript} from "./BaseScript.sol";
 import {IOxionStorage} from "Oxion-Protocol-v1-core/src/interfaces/IOxionStorage.sol";
-import {IPoolManager} from "Oxion-Protocol-v1-core/src/pool-cl/interfaces/ICLPoolManager.sol";
+import {IPoolManager} from "Oxion-Protocol-v1-core/src/interfaces/IPoolManager.sol";
 import {NonfungiblePositionManager} from "../src/NonfungiblePositionManager.sol";
 
 /**
@@ -32,7 +32,7 @@ contract DeployNonFungiblePositionManagerScript is BaseScript {
         emit log_named_address("WETH", weth);
 
         NonfungiblePositionManager nonFungiblePositionManager =
-            new NonfungiblePositionManager(IOxionStorage(oxionStorage), ICLPoolManager(clPoolManager), tokenDescriptor, weth);
+            new NonfungiblePositionManager(IOxionStorage(oxionStorage), IPoolManager(PoolManager), tokenDescriptor, weth);
         emit log_named_address("NonFungiblePositionManager", address(nonFungiblePositionManager));
 
         vm.stopBroadcast();
